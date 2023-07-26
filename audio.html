@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+  <button onclick="playMusic()">Play</button>
+    
+
+<script>
+function playMusic() {
+
+const audio1 = new Audio('music1.mp3');
+const audio2 = new Audio('music2.mp3');
+const audio3 = new Audio('music3.mp3');
+
+audio1.addEventListener('ended', function() {
+  audio2.play();
+});
+
+audio2.addEventListener('ended', function() {
+  audio3.play();
+});
+audio1.play();
+}
+              
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
